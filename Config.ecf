@@ -1,0 +1,806 @@
+# This is a dummy config file that's there to overwrite any custom Config.ecf being used by the main folder
+# Its purpose is to prevent errors from players using unneeded files outside the scenario that break the game
+# Individual personal customizations can also be applied here without breaking the mod, which people keep doing.
+# Reforged Galaxy v1.44
+# May or may not work. This is a test.
+# ==============================================================
+# As of v1.46 this config file now allows players/server owners to change the limitations by easily finding
+# an aspect change that they want enabled and removing the #'s at the start of each line.
+# Descriptions for each change will be listed above the effect.
+# ==============================================================
+# Optional changes include:
+# Easier Mining (For impatient, lazy people)
+# CV Turrets enabled on planets (For people who just want to blow shit up)
+# Softer CPU Limits (Extenders gain an extra bonus amount of CPU)
+# Lighter SVs (SV regain a degree of mobility. For players with no piloting skill whatsoever.)
+# ARMA Mode FPS (FPS combat enters nightmare mode as enemies deal massive damage, but you can drop them with a few shots)
+
+VERSION: 9
+
+
+# ==================== CUSTOM CHANGES ==========================
+
+# ============== MINING CHANGES - EASY MODE ====================
+# Remove the # at the beginning of each line between the { brackets } to enable.
+# Easy Drilling - Increases speed of the mechanical drill
+#{ Item Id: 2056, Name: Drill
+#  {
+#    Damage: 170
+#    Radius: 1.25
+#  }
+#}
+# Easy Drilling 2 - Increases speed of the laser drill
+#{ Item Id: 2067, Name: DrillT2
+#  {
+#    Damage: 250
+#    Radius: 1.5
+#  }
+#}
+# Easy Drilling 3 - Increases speed of the epic drill
+#{ Item Id: 2088, Name: DrillEpic, Ref: DrillT2
+#  {
+#    Damage: 350
+#    Radius: 2.0
+#  }
+#  {
+#    Damage: 450
+#    Radius: 2.5
+#  }
+#}
+# HV/SV Mechanical Drills
+#{ Item Id: 2178, Name: DrillAttachmentWeapon
+#  StackSize: 1000
+#  Mass: 400, type: float, display: false, formatter: Kilogram
+#  Category: Weapons/Items
+#  {
+#    Damage: 500
+#    Radius: 2.5
+#  }
+#}
+# HV T2 Drill
+#{ Item Id: 2181, Name: DrillAttachmentT2Weapon, Ref: DrillAttachmentWeapon
+#  {
+#    Damage: 650
+#    Radius: 2.75
+#  }
+#}
+# HV Drill Turret
+#{ Item Id: 2179, Name: TurretGVDrillWeapon
+#  {
+#    Damage: 600
+#    Radius: 3
+#  }
+#}
+# CV Drill Turret
+#{ Item Id: 2180, Name: TurretMSDrillWeapon
+#  {
+#    Damage: 600
+#    Radius: 3.5
+#  }
+#}
+# ======================== CV Turret use on planets ===========================
+# ==== Unlike vanilla, this is actually better balanced for use on planets ====
+# ==================== still OP though and will ruin the game =================
+# Fixed CV weapons are still disabled in atmo due to abusability with range
+#{ Item Id: 2151, Name: TurretMSArtilleryWeapon
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#}
+#{ Item Id: 2166, Name: TurretMSPlasmaWeapon
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#}
+#{ Item Id: 2171, Name: TurretMSPulseLaserWeapon
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#}
+#{ Item Id: 2173, Name: TurretMSFlakWeapon
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#}
+#{ Item Id: 2174, Name: TurretMSRocketWeapon
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#}
+#{ Item Id: 2183, Name: TurretMSToolWeapon
+#  {
+#    AllowAt: Space
+#  }
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#  {
+#    AllowAt: "Space,Planet"
+#  }
+#}
+# ============================ Softer CPU Limits ==============================
+# ==== Increases the amount of CPU given by each CPU Extender for players =====
+# ============== who are incapable of making simple decisions. ================
+# ======================= stop being greedy assholes ==========================
+# Note: This won't change the displayed value in-game because the config.ecf
+# doesn't support the normal arguments used for CPU management by RG so once
+# enabled, it will reduce the CPU input of other devices on top of boosting.
+#
+#{ Block Id: 2023, Name: CPUExtenderHVT2
+#  CPUIn: -1000, type: int, display: false
+#}
+#{ Block Id: 2024, Name: CPUExtenderHVT3
+#  CPUIn: -1250, type: int, display: false
+#}
+#{ Block Id: 2025, Name: CPUExtenderHVT4, Ref: CPUExtenderHVT3
+#  CPUIn: -1500, type: int, display: false
+#}
+#{ Block Id: 2026, Name: CPUExtenderSVT2
+#  CPUIn: -1000, type: int, display: false
+#}
+#{ Block Id: 2027, Name: CPUExtenderSVT3
+#  CPUIn: -1250, type: int, display: false
+#}
+#{ Block Id: 2028, Name: CPUExtenderSVT4, Ref: CPUExtenderSVT3
+#  CPUIn: -1500, type: int, display: false
+#}
+#{ Block Id: 2029, Name: CPUExtenderCVT2
+#  CPUIn: -50000, type: int, display: false
+#}
+#{ Block Id: 2030, Name: CPUExtenderCVT3
+#  CPUIn: -75000, type: int, display: false
+#}
+#{ Block Id: 2031, Name: CPUExtenderCVT4, Ref: CPUExtenderCVT3
+#  CPUIn: -100000, type: int, display: false
+#}
+#{ Block Id: 2032, Name: CPUExtenderBAT2
+#  CPUIn: -10000, type: int, display: false
+#}
+#{ Block Id: 2033, Name: CPUExtenderBAT3
+#  CPUIn: -20000, type: int, display: false
+#}
+#{ Block Id: 2034, Name: CPUExtenderBAT4, Ref: CPUExtenderBAT3
+#  CPUIn: -30000, type: int, display: false
+#}
+#
+# ============================ Lighter SV ships ==============================
+# == Reduces the mass of armor blocks for HV and SV for easier shiphandling ==
+# ==== For bad pilots who just want to win in the shortest amount of time ====
+# ============================================================================
+#{ Block Id: 380, Name: HullSmallBlocks
+#  Mass: 8, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 381, Name: HullFullSmall
+#  Mass: 8, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 383, Name: HullArmoredFullSmall
+#  Mass: 32, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 393, Name: HullArmoredSmallBlocks
+#  Mass: 32, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 1478, Name: PlasticSmallBlocks
+#  Mass: 3, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 1479, Name: PlasticFullSmall
+#  Mass: 3, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 1594, Name: HullCombatSmallBlocks
+#  Mass: 64, type: float, display: true, formatter: Kilogram
+#}
+#{ Block Id: 1595, Name: HullCombatFullSmall
+#  Mass: 64, type: float, display: true, formatter: Kilogram
+#}
+# ========================= Realistic Combat Mode =============================
+# ==== Welcome to Empyrion: ARMA as it only takes a couple of shots to down ===
+# === A zirax, but it only takes a couple of shots for them to take YOU down ==
+# ========================= Welcome to the danger zone ========================
+# Remove ALL the #'s below this line to the next option to enable !
+#{ Item Id: 2548, Name: MeleeTemplate
+#  {
+#    Damage: 500
+#  }
+#}
+#{ Item Id: 2549, Name: MeleeArmoredGolem, Ref: MeleeTemplate
+#  {
+#    Damage: 900
+#  }
+#}
+#{ Item Id: 2550, Name: MeleeTotalHorror, Ref: MeleeTemplate
+#  {
+#    Damage: 200
+#  }
+#}
+#{ Item Id: 2551, Name: MeleeTalonGuardian, Ref: MeleeTemplate
+#  {
+#    Damage: 220
+#  }
+#}
+#{ Item Id: 2553, Name: MeleeRockGolem, Ref: MeleeTemplate
+#  {
+#    Damage: 600
+#  }
+#}
+#{ Item Id: 2554, Name: MeleeCaveWormWhite, Ref: MeleeTemplate
+#  {
+#    Damage: 260
+#  }
+#}
+#{ Item Id: 2555, Name: MeleeMegalonopsGrey, Ref: MeleeTemplate
+#  {
+#    Damage: 250
+#  }
+#}
+#{ Item Id: 2556, Name: MeleeMegalonopsBrown, Ref: MeleeTemplate
+#  {
+#    Damage: 280
+#  }
+#}
+#{ Item Id: 2557, Name: MeleeLizardMule, Ref: MeleeTemplate
+#  {
+#    Damage: 500
+#  }
+#}
+#{ Item Id: 2558, Name: MeleeLizardMuleBaby, Ref: MeleeTemplate
+#  {
+#    Damage: 150
+#  }
+#}
+#{ Item Id: 2559, Name: MeleeSpinosaurus, Ref: MeleeTemplate
+#  {
+#    Damage: 375
+#  }
+#}
+#{ Item Id: 2560, Name: MeleeTriceratops, Ref: MeleeTemplate
+#  {
+#    Damage: 600
+#  }
+#}
+#{ Item Id: 2561, Name: MeleeGolem2, Ref: MeleeTemplate
+#  {
+#    Damage: 500
+#  }
+#}
+#{ Item Id: 2562, Name: MeleeWorm, Ref: MeleeTemplate
+#  {
+#    Damage: 200
+#  }
+#}
+#{ Item Id: 2563, Name: MeleeOtyugh, Ref: MeleeTemplate
+#  {
+#    Damage: 380
+#  }
+#}
+#{ Item Id: 2564, Name: MeleePlantMonster, Ref: MeleeTemplate
+#  {
+#    Damage: 220
+#  }
+#}
+#{ Item Id: 2565, Name: MeleeSlime, Ref: MeleeTemplate
+#  {
+#    Damage: 145
+#  }
+#}
+#{ Item Id: 2566, Name: MeleeCrawler, Ref: MeleeTemplate
+#  {
+#    Damage: 200
+#  }
+#}
+#{ Item Id: 2567, Name: MeleeAlienBug01, Ref: MeleeTemplate
+#  {
+#    Damage: 150
+#  }
+#}
+#{ Item Id: 2568, Name: MeleeAlienBug02, Ref: MeleeTemplate
+#  {
+#    Damage: 240
+#  }
+#}
+#{ Item Id: 2569, Name: MeleeAlienBug03, Ref: MeleeTemplate
+#  {
+#    Damage: 350
+#  }
+#}
+#{ Item Id: 2570, Name: MeleeWormLarge, Ref: MeleeTemplate
+#  {
+#    Damage: 280
+#  }
+#}
+#{ Item Id: 2571, Name: MeleeWoodWalker, Ref: MeleeTemplate
+#  {
+#    Damage: 250
+#  }
+#}
+#{ Item Id: 2572, Name: MeleeAlienBug04, Ref: MeleeTemplate
+#  {
+#    Damage: 230
+#  }
+#}
+#{ Item Id: 2573, Name: MeleeSpider01, Ref: MeleeTemplate
+#  {
+#    Damage: 100
+#  }
+#}
+#{ Item Id: 2574, Name: MeleeSpider02, Ref: MeleeTemplate
+#  {
+#    Damage: 240
+#  }
+#}
+#{ Item Id: 2575, Name: MeleeSpider03, Ref: MeleeTemplate
+#  {
+#    Damage: 280
+#  }
+#}
+#{ Item Id: 2576, Name: MeleeRaptor, Ref: MeleeTemplate
+#  {
+#    Damage: 150
+#  }
+#}
+#{ Item Id: 2577, Name: MeleeHexapod, Ref: MeleeTemplate
+#  {
+#    Damage: 210
+#  }
+#}
+#{ Item Id: 2578, Name: MeleeOverseer, Ref: MeleeTemplate
+#  {
+#    Damage: 290
+#  }
+#}
+#{ Item Id: 2579, Name: MeleeOviraptor, Ref: MeleeTemplate
+#  {
+#    Damage: 240
+#  }
+#}
+#{ Item Id: 2580, Name: MeleeParasaur, Ref: MeleeTemplate
+#  {
+#    Damage: 200
+#  }
+#}
+#{ Item Id: 2581, Name: MeleeCaveWorm, Ref: MeleeTemplate
+#  {
+#    Damage: 240
+#  }
+#}
+#{ Item Id: 2583, Name: MeleeAssassin, Ref: MeleeTemplate
+#  {
+#    Damage: 275
+#  }
+#}
+#{ Item Id: 2584, Name: MeleeRaptorNight, Ref: MeleeTemplate
+#  {
+#    Damage: 200
+#  }
+#}
+#{ Item Id: 2585, Name: MeleeTelluropod, Ref: MeleeTemplate
+#  {
+#    Damage: 260
+#  }
+#}
+#{ Item Id: 2586, Name: MeleePangolin, Ref: MeleeTemplate
+#  {
+#    Damage: 800
+#  }
+#}
+#{ Item Id: 2587, Name: MeleeRipperDog, Ref: MeleeTemplate
+#  {
+#    Damage: 220
+#  }
+#}
+#{ Item Id: 2588, Name: MeleeCreepy, Ref: MeleeTemplate
+#  {
+#    Damage: 150
+#  }
+#}
+#{ Item Id: 2589, Name: MeleeShell, Ref: MeleeTemplate
+#  {
+#    Damage: 150
+#  }
+#}
+#{ Item Id: 2598, Name: minigunDroneSmall
+#  {
+#    DamageMultiplier_6: 7, data: head|body
+#  }
+#}
+#{ Item Id: 2601, Name: rocketDrone
+#  {
+#    DamageMultiplier_1: 2.5, data: head|body
+#    BlastDamageMultiplier_1: 2.5, data: head|body
+#  }
+#}
+#{ Item Id: 2605, Name: plasmaCannonChargeDrone, Ref: rocketDrone
+#  {
+#    DamageMultiplier_1: 2.5, data: head|body
+#    BlastDamageMultiplier_1: 2.5, data: head|body
+#  }
+#}
+#{ Item Id: 2607, Name: pulseLaserChargeDrone, Ref: rocketDrone
+#  {
+#    DamageMultiplier_1: 4.5, data: head|body
+#  }
+#}
+#{ Item Id: 2608, Name: cannonDroneSmall
+#  {
+#    DamageMultiplier_6: 10, data: head|body
+#  }
+#}
+#{ Item Id: 2612, Name: plasmaChargeSpaceDrone
+#  {
+#    BlastDamageMultiplier_4: 4, data: head|body
+#  }
+#}
+#{ Item Id: 2616, Name: ZiraxMinigunWeapon
+#  {
+#    DamageMultiplier_3: 5, data: head
+#    DamageMultiplier_5: 2.5, data: body
+#  }
+#}
+#{ Item Id: 2617, Name: ZiraxLaserWeapon, Ref: ZiraxMinigunWeapon
+#  {
+#    DamageMultiplier_3: 5, data: head
+#    DamageMultiplier_5: 2.5, data: body
+#  }
+#}
+#{ Item Id: 2618, Name: sentryGunSingle
+#  {
+#    DamageMultiplier_3: 5, data: head
+#    DamageMultiplier_4: 2.5, data: body
+#  }
+#}
+#{ Item Id: 2619, Name: sentryGunSingle2
+#  {
+#    DamageMultiplier_3: 3, data: head
+#    DamageMultiplier_4: 2.0, data: body
+#  }
+#}
+#{ Item Id: 2620, Name: sentryGunSingle3
+#  {
+#    DamageMultiplier_3: 3, data: head
+#    DamageMultiplier_4: 2, data: body
+#  }
+#}
+#{ Item Id: 2622, Name: ZiraxShotgunWeapon
+#  {
+#    DamageMultiplier_1: 3, data: head
+#    DamageMultiplier_4: 2.5, data: body
+#  }
+#}
+#{ Item Id: 2625, Name: SlimeSpider
+#  {
+#    Damage: 200
+#  }
+#}
+#{ Item Id: 2629, Name: SlimeAlienBug
+#  {
+#    DamageMultiplier_2: 2.5, data: head
+#  }
+#}
+#{ Item Id: 2630, Name: MechanoidWeapon, Ref: ZiraxMinigunWeapon
+#  {
+#    DamageMultiplier_3: 4, data: head
+#    DamageMultiplier_5: 2, data: body
+#  }
+#}
+#{ Item Id: 2631, Name: AssaultMechWeapon, Ref: ZiraxMinigunWeapon
+#  {
+#    DamageMultiplier_3: 4, data: head
+#    DamageMultiplier_5: 2, data: body
+#  }
+#}
+#{ Item Id: 2638, Name: DroneBaseAttackMinigunWeapon, Ref: minigunDroneSmall
+#  {
+#    DamageMultiplier_7: 4, data: head
+#    DamageMultiplier_8: 2, data: body
+#  }
+#}
+#{ Item Id: 2640, Name: RocketBaseAttackDrone
+#  {
+#    DamageMultiplier_1: 2.5, data: head|body
+#    BlastDamageMultiplier_1: 5.0, data: head|body
+#  }
+#}
+#{ Item Id: 2644, Name: CrossbowBolt
+#  {
+#    DamageMultiplier_3: 3, data: head
+#    DamageMultiplier_4: 1.5, data: body
+#  }
+#}
+#{ Entity Name: Spinosaurus, Ref: PredatorTemplate
+#  MaxHealth: 200
+#}
+#{ Entity Name: CaveWormGreyOld, Ref: PredatorTemplate
+#  MaxHealth: 150
+#}
+#{ Entity Name: WoodWalker, Ref: PredatorTemplate
+#  MaxHealth: 300
+#}
+#{ Entity Name: Hexapod, Ref: PredatorTemplate
+#  MaxHealth: 200
+#}
+#{ Entity Name: TotalHorror, Ref: PredatorTemplate
+#  MaxHealth: 200
+#}
+#{ Entity Name: TurretRobotV2, Ref: AlienTemplate
+#  MaxHealth: 200
+#}
+#{ Entity Name: TalonGuardianOld
+#  IsEnemy: false
+#  MaxHealth: 150
+#}
+#{ Entity Name: MegalonopsGrey, Ref: PreyTemplateFlee
+#  MaxHealth: 120
+#}
+#{ Entity Name: MegalonopsGreen, Ref: PreyTemplateAttack
+#  MaxHealth: 175
+#}
+#{ Entity Name: MegalonopsBrown, Ref: MegalonopsGreen
+#  MaxHealth: 200
+#}
+#{ Entity Name: Slime, Ref: PreyTemplateAttack
+#  MaxHealth: 100
+#}
+#{ Entity Name: AssaultCyborgOld, Ref: AssaultCyborgTemplate
+#  MaxHealth: 200
+#}
+#{ Entity Name: PreyBAITemplate
+#  IsEnemy: false
+#  MaxHealth: 60
+#}
+#{ Entity Name: Parasaur, Ref: PreyBAITemplate
+#  MaxHealth: 125
+#}
+#{ Entity Name: ParasaurBaby, Ref: Parasaur
+#  MaxHealth: 80
+#}
+#{ Entity Name: Triceratops, Ref: PreyBAITemplate
+#  MaxHealth: 500
+#}
+#{ Entity Name: Spider01, Ref: PredatorBAITemplate
+#  MaxHealth: 80
+#}
+#{ Entity Name: Spider02, Ref: Spider01
+#  MaxHealth: 150
+#}
+#{ Entity Name: Spider03, Ref: Spider01
+#  MaxHealth: 250
+#}
+#{ Entity Name: AlienBug01, Ref: PredatorBAITemplate
+#  IsEnemy: false
+#  MaxHealth: 100
+#}
+#{ Entity Name: AlienBug03, Ref: AlienBug01
+#  IsEnemy: true
+#  MaxHealth: 500
+#}
+#{ Entity Name: AlienBug04, Ref: PredatorBAITemplate
+#  MaxHealth: 225
+#}
+#{ Entity Name: AlienTemplateBAI
+#  IsEnemy: true
+#}
+#{ Entity Name: ZiraxMinigun, Ref: AlienTemplateBAI
+#  MaxHealth: 175
+#}
+#{ Entity Name: ZiraxLaser, Ref: ZiraxMinigun
+#  MaxHealth: 150
+#}
+#{ Entity Name: ZiraxShotgun, Ref: ZiraxMinigun
+#  MaxHealth: 185
+#}
+#{ Entity Name: ZiraxRocket, Ref: ZiraxMinigun
+#  MaxHealth: 140
+#}
+#{ Entity Name: ZiraxSniper, Ref: ZiraxMinigun
+#  MaxHealth: 125
+#}
+#{ Entity Name: ZiraxCommander, Ref: AlienTemplate
+#  MaxHealth: 200
+#}
+#{ Entity Name: ZiraxMale, Ref: ZiraxShotgun
+#  MaxHealth: 180
+#}
+#{ Entity Name: Mechanoid, Ref: AlienTemplateBAI
+#  MaxHealth: 220
+#}
+#{ Entity Name: CaveWormGrey, Ref: PredatorBAITemplate
+#  MaxHealth: 175
+#}
+#{ Entity Name: CaveWormGreen, Ref: CaveWormGrey
+#  MaxHealth: 200
+#}
+#{ Entity Name: CaveWormWhite, Ref: CaveWormGrey
+#  MaxHealth: 225
+#}
+#{ Entity Name: Crawler, Ref: PredatorBAITemplate
+#  MaxHealth: 125
+#}
+#{ Entity Name: Overseer, Ref: PredatorBAITemplate
+#  MaxHealth: 350
+#}
+#{ Entity Name: AlienAssassinGrey, Ref: PredatorBAITemplate
+#  MaxHealth: 220
+#}
+#{ Entity Name: AlienAssassinRed, Ref: AlienAssassinGrey
+#  MaxHealth: 250
+#}
+#{ Entity Name: Raptor, Ref: PredatorBAITemplate
+#  MaxHealth: 120
+#}
+#{ Entity Name: RaptorNight, Ref: Raptor
+#  IsEnemy: true
+#  MaxHealth: 175
+#}
+#{ Entity Name: Pangolin, Ref: PreyBAITemplate
+#  MaxHealth: 400
+#}
+#{ Entity Name: WormDesert, Ref: PreyBAITemplate
+#  MaxHealth: 125
+#}
+#{ Entity Name: WormDesertLarge, Ref: WormDesert
+#  MaxHealth: 150
+#}
+#{ Entity Name: Otyugh, Ref: PreyBAITemplate
+#  MaxHealth: 300
+#}
+#{ Entity Name: LizardMule, Ref: PreyBAITemplate
+#  MaxHealth: 300
+#}
+#{ Entity Name: LizardMuleBaby, Ref: LizardMule
+#  MaxHealth: 120
+#}
+#{ Entity Name: Telluropod, Ref: PredatorBAITemplate
+#  MaxHealth: 220
+#}
+#{ Entity Name: RipperDog, Ref: PredatorBAITemplate
+#  MaxHealth: 100
+#}
+#{ Entity Name: AlienBug02, Ref: PredatorBAITemplate
+#  MaxHealth: 230
+#}
+#{ Entity Name: Oviraptor, Ref: PreyBAITemplate
+#  MaxHealth: 150
+#}
+#{ Entity Name: OviraptorBaby, Ref: Oviraptor
+#  MaxHealth: 80
+#}
+#{ Entity Name: Creepy, Ref: PredatorBAITemplate
+#  MaxHealth: 150
+#}
+#{ Entity Name: GolemDesert, Ref: PredatorBAITemplate
+#  MaxHealth: 400
+#}
+#{ Entity Name: GolemIce, Ref: GolemDesert
+#  MaxHealth: 500
+#}
+#{ Entity Name: GolemSwamp, Ref: GolemDesert
+#  MaxHealth: 450
+#}
+#{ Entity Name: ArmoredGolem, Ref: PredatorBAITemplate
+#  MaxHealth: 800
+#}
+#{ Entity Name: AlienCivilian1, Ref: CivilianTemplate
+#  MaxHealth: 100
+#}
+#{ Entity Name: AssaultCyborg, Ref: AssaultCyborgOld
+#  MaxHealth: 250
+#}
+#{ Entity Name: TalonGuardian, Ref: AlienTemplateBAI
+#  MaxHealth: 140
+#}
+#{ Entity Name: ZiraxMinigunBaseAttack, Ref: ZiraxMinigun
+#  MaxHealth: 175
+#}
+#{ Entity Name: ZiraxShotgunBaseAttack, Ref: ZiraxShotgun
+#  MaxHealth: 180
+#}
+#{ Entity Name: SoldierAlienAssaultRifle, Ref: ZiraxMinigun
+#  MaxHealth: 150
+#}
+#{ Entity Name: SoldierAlienShotgun, Ref: ZiraxMinigun
+#  MaxHealth: 150
+#}
+#{ Entity Name: SoldierHumanMale2AssaultRifle, Ref: ZiraxMinigun
+#  MaxHealth: 200
+#}
+#{ Entity Name: SoldierHumanMale2Shotgun, Ref: ZiraxMinigun
+#  MaxHealth: 200
+#}
+#{ Entity Name: SoldierHumanMaleAssaultRifle, Ref: ZiraxMinigun
+#  MaxHealth: 150
+#}
+#{ Entity Name: SoldierHumanMaleShotgun, Ref: ZiraxMinigun
+#  MaxHealth: 150
+#}
+#{ Entity Name: HumanCivilianMale1, Ref: CivilianTemplate
+#  MaxHealth: 80
+#}
+#{ Entity Name: AlienBug02Group, Ref: AlienBug02
+#  MaxHealth: 200
+#}
+# ===== Holy fuck my fingers are sore from putting in all those #'s =====
+
+
+
+
+# ============================================================================================================================================================================
+# ========================================================================================================================== Project Eden
+# ============================================================================================================================================================================
+# This section is required to balance Project Eden's custom content with Reforged Galaxy.
+# Make sure this section is at the end of your Reforged Eden Config.ecf file.
+
+
+# Fast regenerating shield for CV and BA.
+{ Block Name: Eden_ShieldGeneratorRegenerateCV, Ref: ShieldGeneratorCV
+  CPUIn: 500000, type: int, display: true # 6000000
+  ShieldCapacity: 25000, type: int, display: true # 45000
+}
+
+# ========================================================================================================================== Antimatter Warp Drive CV
+{ Block Name: Eden_WarpDriveAntimatter
+  CPUIn: 500000, type: int, display: true # 5000000
+}
+
+# ========================================================================================================================== Antimatter Warp Drive SV
+{ Block Name: Eden_WarpDriveAntimatterSV
+  CPUIn: 10000, type: int, display: true
+}
+
+# ========================================================================================================================== Auxillary CPU Core CV BA
+{ Block Name: Eden_AuxillaryCPUBA
+  CPUIn: -330000, type: int, display: true # -1000000
+}
+
+# ========================================================================================================================== Auxillary CPU Core SV HV
+{ Block Name: Eden_AuxillaryCPUSV
+  CPUIn: -10000, type: int, display: true # -10000
+}
+
+
+# ========================================================================================================================== Augmented Shield Generators
+# Generally double the shield for 4x the power, cpu, and pentaxid requirements.
+# Requires expensive end game components to make.
+# Meant to use enough CPU and power to require tradeoffs.
+# Does NOT upgrade from a standard shield generator because it's too expensive. Losing all those materials just because you need to move it wouldn't be cool.
+# CV and BA
+{ Block Name: Eden_ShieldGeneratorAugmentedCV, Ref: ShieldGeneratorCV
+  CPUIn: 500000, type: int, display: true # 4000000
+  ShieldCapacity: 60000, type: int, display: true # 100000
+}
+
+# SV and HV
+{ Block Name: Eden_ShieldGeneratorAugmentedSV, Ref: ShieldGeneratorBA
+  CPUIn: 15000, type: int, display: true # 25000
+  ShieldCapacity: 10000, type: int, display: true # 12000
+  ShieldRecharge: 300, type: int, display: true     # 500
+}
+
+
+
+
+
+
+# ============================================================================================================================================================================ POI Turrets
+
+# Brings the corrupted Disruptor turrets up to Reforged damage
+# { Item Id: 3005, Name: Eden_TurretAlienDisruptor_Ammo, Ref: TurretEnemyLaserChargeT2
+# { Item Id: 7101, Name: Eden_TurretAlienDisruptor_Ammo, Ref: TurretEnemyLaserChargeT2
+  # { Child 0
+    # Damage: 3000, display: true #2500
+    # BlastParticleIndex: 12
+    # BlastRadius: 2
+    # BlastDamage: 1000
+    # Range: 750
+    # RangeSpace: 1500
+
+    # DamageMultiplier_1: 0.5, param1: head|body
+    # DamageMultiplier_2: 0, param1: stone|dirt|rock
+    # DamageMultiplier_3: 0.05, param1: shield
+    # DamageMultiplier_4: 1.75, param1: hull|hullarmored|hullcombat|alien
+    # BlastDamageMultiplier_1: 0.25, param1: head|body
+    # BlastDamageMultiplier_2: 0.4, param1: stone|dirt
+    # BlastDamageMultiplier_3: 0.1, param1: rock
+    # BlastDamageMultiplier_4: 0, param1: shield
+    # BlastDamageMultiplier_5: 2.0, param1: hull|hullarmored|hullcombat
+  # }
+  # UnlockLevel: 1
+  # TechTreeNames: Hidden
+# }
