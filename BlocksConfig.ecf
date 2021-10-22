@@ -6547,7 +6547,7 @@ HullCombatSmallBlocks
   ThrusterBoosterFactor: 1.3, type: float, display: true
   EnergyIn: 26460, type: int, display: true, formatter: Watt
   EnergyDynamicGroup: Thruster
-  CPUIn: 50000, type: int, display: true
+  CPUIn: 20000, type: int, display: true
   Category: Devices
   OccupySizeInBlocks: true
   BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
@@ -12996,7 +12996,7 @@ HullCombatSmallBlocks
   ThrusterForce: 920000, type: int, display: true, formatter: Newton
   ThrusterBoosterFactor: 1.3, type: float, display: true
   EnergyIn: 26460, type: int, display: true, formatter: Watt
-  CPUIn: 55000, type: int, display: true
+  CPUIn: 26000, type: int, display: true
   Temperature: 1080, display: true
   Radiation: 15, display: RadiationLevel
 
@@ -16936,7 +16936,7 @@ HullCombatSmallBlocks
   Mass: 39225, type: float, display: true, formatter: Kilogram
   Volume: 800, type: float, display: true, formatter: Liter
   StackSize: 250
-  CPUIn: 50000, type: int, display: true
+  CPUIn: 25000, type: int, display: true
   IsRepairToBlueprint: false
 
   UnlockCost: 17, display: true
@@ -29570,7 +29570,7 @@ HullCombatSmallBlocks
   Category: Devices
   # Info: bkiWarpDrive, display: true
   EnergyIn: 40, type: int, display: true, formatter: Watt
-  CPUIn: 50000, type: int, display: true
+  CPUIn: 30000, type: int, display: true
   DowngradeTo: WarpDrive
 
   BlastParticleName: @rg_projectiles/RG_BlastWarpXL
