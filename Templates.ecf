@@ -215,7 +215,7 @@
 
 { +Template Name: GoldIngot
   BaseItem: true #C1
-  OutputCount: 1
+  OutputCount: 10
   CraftTime: 5
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC,Furn"
   { Child Inputs
@@ -408,7 +408,7 @@
   # }
 # }
 { +Template Name: FusionCell
-  OutputCount: 2 #C2
+  OutputCount: 3 #C2
   CraftTime: 15
   DeconOverride: Stop
   Target: "AdvC"
@@ -667,7 +667,7 @@
  # ================= 
 
 { +Template Name: GoldCoins
-  OutputCount: 20 #A2
+  OutputCount: 50 #A2
   CraftTime: 3
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -1276,8 +1276,8 @@
 { +Template Name: CoreNoCPU
   BaseItem: true
   DeconOverride: Stop
-  CraftTime: 600 #A1 1
-  Target: ""
+  CraftTime: 300 #A1 1
+  Target: "AdvC"
   { Child Inputs
     SteelPlate: 8
     Electronics: 16
@@ -1328,7 +1328,7 @@
     Computer: 20
     CobaltAlloy: 12
     FluxCoil: 4
-    SmallOptronicBridge: 4
+    SmallOptronicBridge: 2
   }
 }
 { +Template Name: CPUExtenderHVT4
@@ -1341,8 +1341,8 @@
     ZascosiumAlloy: 12
     FluxCoil: 4
     PowerCoil: 2
-    SmallOptronicBridge: 4
-    SmallOptronicMatrix: 4
+    SmallOptronicBridge: 2
+    SmallOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderSVT2
@@ -1366,7 +1366,7 @@
     Computer: 20
     CobaltAlloy: 12
     FluxCoil: 8
-    SmallOptronicBridge: 8
+    SmallOptronicBridge: 4
   }
 }
 { +Template Name: CPUExtenderSVT4
@@ -1379,8 +1379,8 @@
     ZascosiumAlloy: 12
     FluxCoil: 8
     PowerCoil: 2
-    SmallOptronicBridge: 8
-    SmallOptronicMatrix: 4
+    SmallOptronicBridge: 4
+    SmallOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderCVT2
@@ -1404,7 +1404,7 @@
     Computer: 20
     CobaltAlloy: 28
     FluxCoil: 14
-    LargeOptronicBridge: 8
+    LargeOptronicBridge: 4
   }
 }
 { +Template Name: CPUExtenderCVT4
@@ -1417,8 +1417,8 @@
     ZascosiumAlloy: 24
     FluxCoil: 16
     PowerCoil: 8
-    LargeOptronicBridge: 8
-    LargeOptronicMatrix: 4
+    LargeOptronicBridge: 4
+    LargeOptronicMatrix: 2
   }
 }
 { +Template Name: CPUExtenderBAT2
@@ -1442,7 +1442,7 @@
     Computer: 20
     CobaltAlloy: 28
     FluxCoil: 14
-    LargeOptronicBridge: 6
+    LargeOptronicBridge: 3
   }
 }
 { +Template Name: CPUExtenderBAT4
@@ -1455,8 +1455,8 @@
     ZascosiumAlloy: 24
     FluxCoil: 16
     PowerCoil: 8
-    LargeOptronicBridge: 8
-    LargeOptronicMatrix: 4
+    LargeOptronicBridge: 4
+    LargeOptronicMatrix: 2
   }
 }
  # ======================= 
@@ -1904,7 +1904,7 @@
     FluxCoil: 12
     ZascosiumAlloy: 25
     PowerCoil: 5
-    LaserKit: 1
+    LaserKit: 0
     AutoMinerCore: 1
   }
 }
@@ -1919,7 +1919,7 @@
     CapacitorComponent: 25
     ZascosiumAlloy: 75
     PowerCoil: 10
-    LaserKit: 2
+    LaserKit: 0
     AutoMinerCore: 1
   }
 }
@@ -5089,7 +5089,7 @@
 }
 
 { +Template Name: PulseLaserChargeMS #"Ls.Charge CV"
-  OutputCount: 1 #D1 25 for "TurretMSPulseLaser"
+  OutputCount: 2 #D1 25 for "TurretMSPulseLaser"
   DeconOverride: Continue
   CraftTime: 5
   Target: "AdvC"
@@ -5100,7 +5100,7 @@
 }
 
 { +Template Name: PulseLaserChargeMSWeapon #"Ls.Charge II CV"
-  OutputCount: 1 #D1 25 for "WeaponMS02" Pulse Laser
+  OutputCount: 2 #D1 25 for "WeaponMS02" Pulse Laser
   DeconOverride: Continue
   CraftTime: 5
   Target: "AdvC"
@@ -5111,7 +5111,7 @@
 }
 
 { +Template Name: PulseLaserChargeBA #"Ls.Charge BA"
-  OutputCount: 1 #D1 20 for "TurretBasePulseLaser"
+  OutputCount: 2 #D1 20 for "TurretBasePulseLaser"
   DeconOverride: Continue
   CraftTime: 5
   Target: "AdvC"
@@ -5188,7 +5188,7 @@
   }
 }
 { +Template Name: FastRocket
-  OutputCount: 6 #B1 10 used by "WeaponSV05"
+  OutputCount: 10 #B1 10 used by "WeaponSV05"
   CraftTime: 5
   Target: "BaseC,LargeC,AdvC"
   { Child Inputs
@@ -5198,7 +5198,7 @@
   }
 }
 { +Template Name: FastRocketGV
-  OutputCount: 6 #B1 10 used by "WeaponSV05"
+  OutputCount: 10 #B1 10 used by "WeaponSV05"
   CraftTime: 5
   Target: "HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -5209,7 +5209,7 @@
   }
 }
 { +Template Name: FastRocketHoming
-  OutputCount: 6 #B1 for "TurretGVRocket"
+  OutputCount: 10 #B1 for "TurretGVRocket"
   CraftTime: 5
   Target: "LargeC,AdvC"
   { Child Inputs
@@ -5220,7 +5220,7 @@
   }
 }
 { +Template Name: FastRocketMS
-  OutputCount: 6 #D1 12 for "TurretMSRocket"
+  OutputCount: 10 #D1 12 for "TurretMSRocket"
   CraftTime: 5
   Target: AdvC
   { Child Inputs
@@ -5233,7 +5233,7 @@
 }
 
 { +Template Name: FastRocketBA
-  OutputCount: 6 #C2 5
+  OutputCount: 10 #C2 5
   CraftTime: 5
   Target: "LargeC,AdvC"
   { Child Inputs
@@ -5256,7 +5256,7 @@
   }
 }
 { +Template Name: LargeRocket
-  OutputCount: 4 #D1 for "TurretBaseArtillery"
+  OutputCount: 8 #D1 for "TurretBaseArtillery"
   CraftTime: 10
   Target: "AdvC"
   { Child Inputs
@@ -5269,7 +5269,7 @@
 }
 
 { +Template Name: LargeRocketMS
-  OutputCount: 4 #D1 for "TurretMSArtillery"
+  OutputCount: 8 #D1 for "TurretMSArtillery"
   CraftTime: 5
   Target: "AdvC"
   { Child Inputs
@@ -5282,7 +5282,7 @@
 }
 
 { +Template Name: ArtilleryRocket
-  OutputCount: 4 #D1 20 for "TurretGVArtillery"
+  OutputCount: 8 #D1 20 for "TurretGVArtillery"
   CraftTime: 5
   Target: "AdvC"
   { Child Inputs
@@ -5293,7 +5293,7 @@
 }
 
 { +Template Name: SVBomb
-  OutputCount: 2 #D1 20 for "WeaponSV08"
+  OutputCount: 4 #D1 20 for "WeaponSV08"
   CraftTime: 5
   Target: "AdvC"
   { Child Inputs
@@ -5306,7 +5306,7 @@
 }
 
 { +Template Name: TorpedoSV
-  OutputCount: 1 #D1 20 for "WeaponSV10"
+  OutputCount: 2 #D1 20 for "WeaponSV10"
   CraftTime: 20
   Target: "AdvC"
   { Child Inputs
@@ -5377,7 +5377,7 @@
 }
 
 { +Template Name: PulseLaserChargeMST2 #"Ls.Charge CV"
-  OutputCount: 1 #D1 25 for "TurretMSPulseLaserT2"
+  OutputCount: 2 #D1 25 for "TurretMSPulseLaserT2"
   DeconOverride: Continue
   CraftTime: 5
   Target: "AdvC"
@@ -5389,7 +5389,7 @@
 }
 
 { +Template Name: PulseLaserChargeBAT2 #"Ls.Charge BA"
-  OutputCount: 1 #D1 20 for "TurretBasePulseLaserT2"
+  OutputCount: 2 #D1 20 for "TurretBasePulseLaserT2"
   DeconOverride: Continue
   CraftTime: 5
   Target: "AdvC"
@@ -5891,7 +5891,7 @@
  # ======================= 
 { +Template Name: PowerBar
   DeconOverride: Stop
-  CraftTime: 12
+  CraftTime: 9
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC,SuitC"
   { Child Inputs
     PlantProtein: 2
@@ -6061,13 +6061,14 @@
 }
 { +Template Name: EmergencyRations
   DeconOverride: Stop
-  CraftTime: 60
+  CraftTime: 30
   Target: FoodP
   { Child Inputs
-    Bread: 2
-    Ham: 2
-    FruitJuice: 2
-    Ratatouille: 1
+    Bread: 0
+    Ham: 0
+    FruitJuice: 0
+    Ratatouille: 0
+    PowerBar: 6
   }
 }
 
@@ -6659,13 +6660,13 @@
 { +Template Name: AutoMinerCore
   DeconOverride: Continue
   CraftTime: 2
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
-    SteelPlate: 12
-	Computer: 8
+    SteelPlate: 500
+	Computer: 35
 	SmallOptronicBridge: 1
-	LaserKit: 1
-	OpticalFiber: 50
+	LaserKit: 0
+	OpticalFiber: 100
   }
 }
 { +Template Name: SmallOptronicBridge
@@ -6673,7 +6674,7 @@
   CraftTime: 60
   Target: "LargeC,AdvC"
   { Child Inputs
-    GoldIngot: 5
+    GoldIngot: 3
     Electronics: 30
     Oscillator: 20
 	OpticalFiber: 20
@@ -6684,7 +6685,7 @@
   CraftTime: 120
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 6
+    GoldIngot: 4
     Computer: 25
     EnergyMatrix: 10
   }
@@ -6694,7 +6695,7 @@
   CraftTime: 120
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 5
+    GoldIngot: 3
     SmallOptronicBridge: 1
     Oscillator: 24
     ZascosiumAlloy: 20
@@ -6705,7 +6706,7 @@
   CraftTime: 180
   Target: "AdvC"
   { Child Inputs
-    GoldIngot: 10
+    GoldIngot: 5
     SmallOptronicMatrix: 1
     PowerCoil: 4
 	Computer: 10
@@ -6806,7 +6807,7 @@
 { +Template Name: SmallUpgradeKit
   CraftTime: 30
   BaseItem: true
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
     ZascosiumAlloy: 50
 	SteelPlateArmored: 30
@@ -6818,7 +6819,7 @@
 { +Template Name: LargeUpgradeKit
   CraftTime: 60
   BaseItem: true
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
     ZascosiumAlloy: 80
 	SteelPlateArmored: 50
@@ -6830,7 +6831,7 @@
 { +Template Name: AdvancedUpgradeKit
   CraftTime: 45
   BaseItem: true
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
     ZascosiumAlloy: 50
 	Oscillator: 30
@@ -6853,7 +6854,7 @@
 # ======= New Stuff =======
 { +Template Name: WarpDriveT2
   CraftTime: 190 #C2 CV 10
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
     EnergyMatrix: 50
     Electronics: 64
@@ -6883,10 +6884,10 @@
   BaseItem: true
   DeconOverride: Stop
   CraftTime: 60
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
-    LargeOptronicMatrix: 4
-    QuantumProcessor: 24
+    LargeOptronicMatrix: 2
+    QuantumProcessor: 15
     XenoSubstrate: 64
     ZascosiumAlloy: 80
 	PlatinOunce: 40
@@ -6896,10 +6897,10 @@
   BaseItem: true
   DeconOverride: Stop
   CraftTime: 20
-  Target: ""
+  Target: "AdvC"
   { Child Inputs
-    SmallOptronicMatrix: 4
-    QuantumProcessor: 8
+    SmallOptronicMatrix: 2
+    QuantumProcessor: 10
     XenoSubstrate: 32
     ZascosiumAlloy: 40
 	PlatinOunce: 20
