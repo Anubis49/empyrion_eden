@@ -1283,6 +1283,10 @@
     Electronics: 16
     Computer: 5
     OpticalFiber: 12
+    FluxCoil: 16
+    PowerCoil: 8
+    LargeOptronicBridge: 4
+    LargeOptronicMatrix: 2
   }
 }
 { +Template Name: CoreNPC
