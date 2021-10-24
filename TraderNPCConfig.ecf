@@ -383,6 +383,7 @@
   Item22: "PlatinBar, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-500"
   Item23: "AluminiumPowder, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-1500"
   Item24: "Graphite, 0, 0, mf=0.5-0.75, 300-2500"
+  Item25: "QuantumProcessor, 0, 0, mf=0.5-0.75, 90000-95000"
 }
 
 { Trader Name: MarketCafe
@@ -2249,6 +2250,7 @@
   Item15: "PlasticMaterial, mf=1.0-1.25, 3500-4000, mf=0.5-0.75, 1000-8000"
   Item16: "OreScanner, mf=1.0-1.25, 1-15, mf=0.5-0.75, 5-30"
   Item17: "RawDiamond, 0, 0, mf=3.0-4.0, 5-20"
+  Item18: "QuantumProcessor, 0, 0, mf=0.5-0.75, 90000-95000"
 }
 
 { Trader Name: M.A Corp Advanced
@@ -2271,6 +2273,7 @@
   Item14: "PlatinBar, mf=1.0-1.25, 0-15, mf=0.5-0.75, 10-25"
   Item15: "OreScanner, mf=1.0-1.25, 1-15, mf=0.5-0.75, 5-30"
   Item16: "AutoMinerCore, mf=1.0-1.25, 1-5, mf=0.5-0.75, 5-20"
+  Item17: "QuantumProcessor, 0, 0, mf=0.5-0.75, 90000-95000"
 }
 
 # Industrial Manufacturers
