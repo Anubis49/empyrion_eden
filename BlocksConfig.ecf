@@ -19286,7 +19286,7 @@ HullCombatSmallBlocks
   BlastParticleIndex: 10
   BlastRadius: 10
   BlastDamage: 300
-  RangeLY: 0 # a value of 0 allows to teleport only within the current sector
+  RangeLY: 50 # a value of 0 allows to teleport only within the current sector
   
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
